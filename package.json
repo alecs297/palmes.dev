@@ -1,0 +1,36 @@
+{
+  "name": "palmes.dev",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-three/fiber": "^8.3.1",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "three": "^0.143.0"
+  },
+  "scripts": {
+    "start": "npm run tailwindcss && react-scripts start",
+    "build": "npm run tailwindcss && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tailwindcss": "postcss src/tailwind.css -o src/app_tailwind.css"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
