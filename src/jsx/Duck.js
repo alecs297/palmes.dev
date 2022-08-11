@@ -5,11 +5,13 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense, useEffect } from 'react'
 import { AnimationMixer } from "three"
 
-function Duck({canvas=null}) {
+function Duck({origin=null}) {
 
     let state = null;
 
-    let duck = useRef()
+    const duck = useRef()
+    // TODO
+    const tooltip = useRef()
 
     const gltf = useLoader(GLTFLoader, 'models/duk.glb')
     const mixer = new AnimationMixer(gltf.scene)
@@ -18,14 +20,13 @@ function Duck({canvas=null}) {
     let last_frame_scroll = 0;
     let last_time_scroll = Date.now();
 
-    let last_frame_before_turn = 0;
-
     const move_timeout_ms = 100
     const start_pos_x = 0
     const end_pos_x = 10
 
     const start_rot_y = -Math.PI/2
     const end_rot_y = start_rot_y + Math.PI
+    const middle_rot_y = -0.8
 
     // convert distance to animation frames
     const ms_per_percentage = 0.15;
@@ -35,7 +36,7 @@ function Duck({canvas=null}) {
     const percentage_for_move = 0.7
 
     function getScrollPercent() {
-        let res = (-1)*(canvas.current.getBoundingClientRect().top + window.scrollY) / document.body.getBoundingClientRect().height
+        let res = (-1)*(origin.current.getBoundingClientRect().top + window.scrollY) / document.body.getBoundingClientRect().height
         return res > 0 ? res <= 1 ? res : 1 : 0;
     }
 
@@ -63,21 +64,21 @@ function Duck({canvas=null}) {
             if (!is_good_way) {
                 let rotation = duck.current.rotation.y + ( end_rot_y - start_rot_y ) * ((scrollY - last_frame_scroll) / percentage_for_turn);
                 duck.current.rotation.y = Math.min(Math.max(start_rot_y, rotation), end_rot_y)
-                window.scroll(0, last_frame_before_turn)
 
             }
             let position_x = (end_pos_x - start_pos_x) * ((scrollY) / (percentage_for_move))
             duck.current.position.x = position_x
-            last_frame_before_turn = scrollY
             
 
             mixer.update(Math.abs(scrollY - last_frame_scroll) / ms_per_percentage)
             last_time_scroll = Date.now()
 
         } else {
-            if (scrollY === 0 || scrollY === 1 || (Date.now() - last_time_scroll > move_timeout_ms)) {
+            if (Date.now() - last_time_scroll > move_timeout_ms) {
                 switchAnimation(0)
                 mixer.update(delta)
+            } else if (scrollY === 0 || scrollY === 1) {
+                if (duck.current.rotation.y < middle_rot_y) duck.current.rotation.y++
             }
         }
 
@@ -85,7 +86,7 @@ function Duck({canvas=null}) {
     })
 
     useEffect(() => {
-        duck.current.rotation.y = -0.7
+        duck.current.rotation.y = middle_rot_y;
     }, [duck, start_rot_y])
 
     // Return the view, these are regular Threejs elements expressed in JSX
