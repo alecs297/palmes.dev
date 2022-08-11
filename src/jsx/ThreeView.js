@@ -7,13 +7,17 @@ function ThreeView() {
     
     const ref = useRef()
     return (
-        <div className='h-screen'>
-            <Canvas ref={ref}>
-                <ambientLight />
-                <pointLight position={[10, 10, 10]} />
-                <Duck canvas={ref} position={[0, 0, 0]} />
-            </Canvas>
-        </div>
+        <>
+            <div ref={ref}></div>
+            <div className='h-screen sticky top-0'>
+                <Canvas>
+                    <ambientLight intensity={0.5}/>
+                    <pointLight intensity={2} position={[10, 0, 5]} />
+                    <Duck canvas={ref} position={[0, 0, 0]} />
+                </Canvas>
+            </div>
+        </>
+        
     )
 }
 

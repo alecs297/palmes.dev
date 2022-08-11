@@ -6,8 +6,8 @@ function App() {
     return (
       <div className="bg-black p-0 m-0 h-screen w-screen overflow-x-hidden text-white">
         <div className="container mx-auto">
-          <Header/>
           <ThreeView/>
+          <Header/>
           <Content/>
         </div>
       </div>
