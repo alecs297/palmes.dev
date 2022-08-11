@@ -82,7 +82,7 @@ function Duck({canvas=null}) {
     useEffect(() => {
         duck.current.rotation.x = 0.5
         duck.current.rotation.y = start_rot_y
-    }, [duck])
+    }, [duck, start_rot_y])
 
     // Return the view, these are regular Threejs elements expressed in JSX
     return (
