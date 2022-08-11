@@ -85,7 +85,6 @@ function Duck({canvas=null}) {
     })
 
     useEffect(() => {
-        duck.current.rotation.x = 0.4
         duck.current.rotation.y = -0.7
     }, [duck, start_rot_y])
 
