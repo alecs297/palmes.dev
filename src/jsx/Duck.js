@@ -1,109 +1,23 @@
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { useRef } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { Suspense, useEffect } from 'react'
-import { AnimationMixer } from "three"
+import { Suspense, useEffect, useState } from 'react'
+import { AnimationMixer, MathUtils } from "three"
+
+import { updatePositions, convertMoves } from '../movements/engine'
+import DuckMoves from "./../movements/duck"
 
 // convert distance to animation frames
 const ms_per_percentage = 0.15;
 // inactivity timeout before switching to idle animation
-const move_timeout_ms = 500
-
-// frame is scrolled percentage
-const movements = [
-    {
-        frame: 1,
-        position: {
-            x: 0,
-            y: 0,
-            z: 0
-        },
-        rotation: {
-            x: 0,
-            y: 0.8,
-            z: 0
-        }
-    },
-    {
-        frame: 25,
-        position: {
-            x: 0.75,
-            y: 0,
-            z: 0
-        },
-        rotation: {
-            x: 0,
-            y: Math.PI / 2,
-            z: 0
-        }
-    },
-    {
-        frame: 40,
-        position: {
-            x: 1,
-            y: -0.5,
-            z: 0
-        },
-        rotation: {
-            x: 0,
-            y: 0,
-            z: 0
-        }
-    },
-    {
-        frame: 60,
-        position: {
-            x: 1,
-            y: -0.8,
-            z: 0
-        },
-        rotation: {
-            x: 0,
-            y: -Math.PI / 2,
-            z: 0
-        }
-    },
-    {
-        frame: 99,
-        position: {
-            x: 0.5,
-            y: 0,
-            z: 1
-        },
-        rotation: {
-            x: 0,
-            y: -0.9,
-            z: 0
-        }
-    },
-]
-
-function updatePositions(object, start, end, scrollY, reverse=false, just_reversed=0) {
-
-    object.position.x = getPath(start.position.x, end.position.x, scrollY, start.frame, end.frame);
-    object.position.y = getPath(start.position.y, end.position.y, scrollY, start.frame, end.frame);
-    object.position.z = getPath(start.position.z, end.position.z, scrollY, start.frame, end.frame);
-    object.rotation.x = getPath(start.rotation.x, end.rotation.x, scrollY, start.frame, end.frame) % (2 * Math.PI);
-    object.rotation.z = getPath(start.rotation.z, end.rotation.z, scrollY, start.frame, end.frame) % (2 * Math.PI);
-
-    if (reverse) {
-        object.rotation.y = getPath((start.rotation.y + Math.PI), (end.rotation.y + (Math.PI * !just_reversed)), scrollY, start.frame, end.frame) % (2 * Math.PI);
-    } else {
-        object.rotation.y = getPath(start.rotation.y, end.rotation.y, scrollY, start.frame, end.frame) % (2 * Math.PI);
-    }
-
-}
-
-function getPath(start, end, scroll, frame_start, frame_end) {
-    const percentage = (((scroll * 100) - frame_start) / (frame_end - frame_start));
-    let r = (end - start) * percentage + start
-    return isFinite(r) ? r : start
-}
+const move_timeout_ms = 50
 
 function Duck({origin=null}) {
 
     let state = null;
+
+    const [cameraRef, setCameraRef] = useState(null)
 
     const duck = useRef()
     // TODO
@@ -116,6 +30,8 @@ function Duck({origin=null}) {
     let last_frame_scroll = 0;
     let last_time_scroll = Date.now();
     let last_frame_reverse = false;
+
+    let movements = DuckMoves;
 
     function getScrollPercent() {
         let res = (-1)*(origin.current.getBoundingClientRect().top + window.scrollY) / document.body.getBoundingClientRect().height
@@ -133,6 +49,19 @@ function Duck({origin=null}) {
             state = i;
         }
     }
+
+    useThree(({camera}) => {
+        let vFOV = MathUtils.degToRad( camera.fov );
+
+        let max_y = 2 * Math.tan( vFOV / 2 ) * 5; // visible height
+        let max_x = max_y * camera.aspect;        // visible width
+
+        movements = convertMoves(DuckMoves, max_x, max_y)
+
+        console.log(movements)
+
+        if (!cameraRef) setCameraRef(camera)
+    })
 
     useEffect(() => updatePositions(duck.current, movements[0], movements[0], 0), [duck])
 
@@ -188,7 +117,7 @@ function Duck({origin=null}) {
         <mesh
         ref={duck} 
         scale={1}>
-            <Suspense fallback={null}>
+            <Suspense hidden={!cameraRef} fallback={null}>
                 <primitive scale={0.75} object={gltf.scene}/>
             </Suspense>
         </mesh>
