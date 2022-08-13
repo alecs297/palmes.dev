@@ -5,7 +5,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense, useEffect, useState } from 'react'
 import { AnimationMixer, MathUtils } from "three"
 
-import { updatePositions, convertMoves } from '../movements/engine'
+import { updatePositions, convertMoves } from '../utils/engine'
+import { getScrollPercent } from '../utils/scroll'
 import DuckMoves from "./../movements/duck"
 
 // convert distance to animation frames
@@ -33,11 +34,6 @@ function Duck({origin=null}) {
 
     let movements = DuckMoves;
 
-    function getScrollPercent() {
-        let res = (-1)*(origin.current.getBoundingClientRect().top + window.scrollY) / document.body.getBoundingClientRect().height
-        return res > 0 ? res <= 1 ? res : 1 : 0;
-    }
-
     function switchAnimation(i) {
         if (state !== i) {
             if (animation) animation.fadeOut(1);
@@ -58,8 +54,6 @@ function Duck({origin=null}) {
 
         movements = convertMoves(DuckMoves, max_x, max_y)
 
-        console.log(movements)
-
         if (!cameraRef) setCameraRef(camera)
     })
 
@@ -67,7 +61,7 @@ function Duck({origin=null}) {
 
     useFrame((state, delta) => {
 
-        const scrollY = getScrollPercent();
+        const scrollY = getScrollPercent(origin.current);
         const moving = (scrollY === last_frame_scroll) ? 0 : (scrollY > last_frame_scroll ? 1 : -1);
 
         let start = movements[0];
@@ -102,7 +96,12 @@ function Duck({origin=null}) {
                 } else {
                     duck.current.rotation.y = (duck.current.rotation.y - rotation) % (Math.PI * 2);
                 }
+            }
 
+            if (scrollY === 1) {
+                duck.current.rotation.y += Math.PI/75
+                duck.current.rotation.x += Math.PI/100
+                duck.current.rotation.y += Math.PI/50
             }
             switchAnimation(0)
             mixer.update(delta);

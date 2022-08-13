@@ -3,15 +3,12 @@ import { useRef } from 'react'
 
 import Duck from './Duck'
 
-function ThreeView() {
-    
-    const origin = useRef();
+function ThreeView({origin}) {
     const canvas = useRef();
 
     return (
         <>
-            <div ref={origin}></div>
-            <div className='h-screen sticky top-0'>
+            <div className='h-screen w-full fixed top-0'>
                 <Canvas ref={canvas} camera={{
                     rotation: [-0.5, 0, 0],
                     position: [0, 2, 4],
