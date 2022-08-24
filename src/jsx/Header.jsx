@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Header({origin}) {
+function Header() {
 
     const menu = [
         {
@@ -10,6 +10,10 @@ function Header({origin}) {
         {
             title: "LinkedIn",
             url: "https://www.linkedin.com/in/alecs297"
+        },
+        {
+            title: "Model Source",
+            url: "https://skfb.ly/o6KIu"
         }
     ];
 
@@ -24,7 +28,7 @@ function Header({origin}) {
                     { menu.map(entry => {
                         return (
                             <li key={"nav-button-" + entry.title}>
-                                <a href={entry.url}>
+                                <a target="_blank" rel="noreferrer noopener" href={entry.url}>
                                     {entry.title}
                                 </a>
                             </li>

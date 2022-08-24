@@ -1,6 +1,6 @@
-function NoContent() {
+function NoContent({className="", size="screen"}) {
     return(
-        <div className="container h-screen relative"></div>
+        <div className={"container h-" + size + " relative " + className}></div>
     )
 }
 
