@@ -8,7 +8,7 @@ function ThreeView({origin}) {
 
     return (
         <>
-            <div className='h-screen w-full fixed top-0'>
+            <div className='h-screen w-full fixed top-0 z-0 pointer-events-none'>
                 <Canvas ref={canvas} camera={{
                     rotation: [-0.5, 0, 0],
                     position: [0, 2, 4],

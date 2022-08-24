@@ -7,7 +7,7 @@ import { AnimationMixer, MathUtils } from "three"
 
 import { updatePositions, convertMoves } from '../utils/engine'
 import { getScrollPercent } from '../utils/scroll'
-import DuckMoves from "./../movements/duck"
+import DuckMoves from "../movements/duck"
 
 // convert distance to animation frames
 const ms_per_percentage = 0.15;
@@ -57,7 +57,7 @@ function Duck({origin=null}) {
         if (!cameraRef) setCameraRef(camera)
     })
 
-    useEffect(() => updatePositions(duck.current, movements[0], movements[0], 0), [duck])
+    useEffect(() => updatePositions(duck.current, movements[0], movements[0], 0), [duck, movements])
 
     useFrame((state, delta) => {
 
@@ -98,11 +98,6 @@ function Duck({origin=null}) {
                 }
             }
 
-            if (scrollY === 1) {
-                duck.current.rotation.y += Math.PI/75
-                duck.current.rotation.x += Math.PI/100
-                duck.current.rotation.y += Math.PI/50
-            }
             switchAnimation(0)
             mixer.update(delta);
         }
