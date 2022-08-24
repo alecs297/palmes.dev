@@ -24,7 +24,7 @@ function Duck({origin=null}) {
     // TODO
     const tooltip = useRef()
 
-    const gltf = useLoader(GLTFLoader, 'models/duk.glb')
+    const gltf = useLoader(GLTFLoader, 'models/duck_centered.glb')
     const mixer = new AnimationMixer(gltf.scene)
 
     let animation = null;

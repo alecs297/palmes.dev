@@ -11,7 +11,7 @@ function App() {
     return (
         <div className="bg-black p-0 m-0 h-screen w-screen overflow-x-hidden text-white">
             <div ref={origin}></div>
-            <div className="container mx-auto h-full">
+            <div className="mx-auto h-full">
                 <ThreeView origin={origin}/>
                 <NoContent/>
                 <Header origin={origin}/>

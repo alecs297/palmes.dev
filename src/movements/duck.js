@@ -16,7 +16,7 @@ const DuckMoves = [
         frame: 50,
         position: {
             x: 6,
-            y: 0,
+            y: -0.25,
             z: 0
         },
         rotation: {

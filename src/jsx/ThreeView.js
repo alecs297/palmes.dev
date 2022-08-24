@@ -12,6 +12,7 @@ function ThreeView({origin}) {
                 <Canvas ref={canvas} camera={{
                     rotation: [-0.5, 0, 0],
                     position: [0, 2, 4],
+                    type: "OrthographicCamera"
                 }}>
                     <ambientLight intensity={0.5}/>
                     <pointLight shadow={1} intensity={2} position={[10, 0, 5]} />
