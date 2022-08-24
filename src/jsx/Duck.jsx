@@ -14,11 +14,13 @@ const ms_per_percentage = 0.15;
 // inactivity timeout before switching to idle animation
 const move_timeout_ms = 50
 
-function Duck({origin=null}) {
+function Duck({canvas}) {
 
     let state = null;
 
     const [cameraRef, setCameraRef] = useState(null)
+
+    const container = canvas.current.parentElement.parentElement.parentElement.parentElement;
 
     const duck = useRef()
     // TODO
@@ -61,7 +63,7 @@ function Duck({origin=null}) {
 
     useFrame((state, delta) => {
 
-        const scrollY = getScrollPercent(origin.current);
+        const scrollY = getScrollPercent(container, null);
         const moving = (scrollY === last_frame_scroll) ? 0 : (scrollY > last_frame_scroll ? 1 : -1);
 
         let start = movements[0];
