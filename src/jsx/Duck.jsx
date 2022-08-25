@@ -1,8 +1,6 @@
-import { useFrame, useThree } from '@react-three/fiber'
-import { useRef } from 'react'
-import { useLoader } from '@react-three/fiber'
+import { useFrame, useThree, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense, useEffect, useState, useRef } from 'react'
 import { AnimationMixer, MathUtils } from "three"
 
 import { updatePositions, convertMoves } from '../utils/engine'
@@ -23,8 +21,6 @@ function Duck({canvas}) {
     const container = canvas.current.parentElement.parentElement.parentElement.parentElement;
 
     const duck = useRef()
-    // TODO
-    const tooltip = useRef()
 
     const gltf = useLoader(GLTFLoader, 'models/duck_centered.glb')
     const mixer = new AnimationMixer(gltf.scene)
@@ -63,7 +59,7 @@ function Duck({canvas}) {
 
     useFrame((state, delta) => {
 
-        const scrollY = getScrollPercent(container, null);
+        const scrollY = getScrollPercent(container);
         const moving = (scrollY === last_frame_scroll) ? 0 : (scrollY > last_frame_scroll ? 1 : -1);
 
         let start = movements[0];

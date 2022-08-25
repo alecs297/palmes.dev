@@ -47,7 +47,7 @@ function updateText(index, direction=1, options={}) {
 
 }
 
-function Typewritter({children, className, options={}}) {
+function Typewritter({children, className, textClassName, cursorClassName="", options={}}) {
 
     const [currentText, setCurrentText] = useState(null)
     const ref = useRef()
@@ -61,14 +61,14 @@ function Typewritter({children, className, options={}}) {
             target: children,
             setTarget: setCurrentText,
         })
-
+    // eslint-disable-next-line
     }, [children])
 
     return (
-        <>
-            <span ref={ref} className={className}>{currentText}</span>
-            <span className="animate-blink text-cyan-300">|</span>
-        </>
+        <span className={"inline " + className}>
+            <span ref={ref} className={textClassName}>{currentText}</span>
+            <span className={"animate-blink text-cyan-100 " + cursorClassName}>|</span>
+        </span>
     )
 }
 

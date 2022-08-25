@@ -1,5 +1,3 @@
-import { useRef } from 'react'
-
 import Header from "./Header";
 import ThreeView from "./ThreeView";
 import NoContent from "./NoContent";
@@ -15,6 +13,8 @@ function App() {
             <Header/>
             <NoContent size="1/4"/>
             <Bio/>
+            <NoContent/>
+            <NoContent className='sticky'/>
             <div id="anchor-end"/>
         </div>
     );
