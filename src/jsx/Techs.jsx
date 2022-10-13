@@ -158,16 +158,16 @@ const techs = [
 
 function TechDescription() {
     return (
-        <div className="text-md tracking-tight md:text-xl p-3 bg-stone-1000 w-full xl:w-3/4 space-y-3">
+        <div className="text-md tracking-tight md:text-xl p-6 bg-stone-1000 w-full xl:w-3/4 space-y-3">
             <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">languages and frameworks don't matter.</span></p>
 
-            <p>While his post is certainly inspired by a motivational quote he scrolled past on Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500"><br />he is right</span>.</p>
+            <p>While his post is certainly inspired by a motivational quote he scrolled past on Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">he is right</span>.</p>
 
             <p>Software engineering is not bound to a specific tool.</p>
             
             <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">However</span>, mastering the right <span className="line-through decoration-4 decoration-red-700">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
 
-            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">favorite</span> bricks I use for building stuff.</p>
+            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">favorite</span> languages and frameworks I use for building stuff.</p>
 
             <p>Feel free to check out my
                 <span onClick={() => {window.open(
