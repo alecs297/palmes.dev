@@ -6,15 +6,17 @@ function Bio() {
     const stuff = [
         "do freelance.",
         "make websites.",
-        "code stuff.",
+        "break websites.",
+        "design APIs.",
+        "code stuff."
     ]
 
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
     return (
-        <div className="w-full md:w-1/2 h-screen mx-4 md:m-0 md:grid grid-cols-1 sticky top-0 md:place-content-evenly z-10">
+        <div className="w-full md:w-1/2 h-screen mx-4 my-16 md:m-0 md:grid grid-cols-1 sticky top-0 md:place-content-evenly z-10">
             <div className="place-self-center px-3">
-                <h2 className="text-5xl md:text-7xl y-2 font-extrabold py-3 pb-5 bg-stone-900 w-fit">Hello world.</h2>
+                <h2 className="text-5xl md:text-7xl font-extrabold py-3 pb-5 bg-stone-900 w-fit">Hello world.</h2>
                 <div className="md:text-3xl font-bold bg-stone-900 px-3 mx-3">
                     <p>
                         My name is
