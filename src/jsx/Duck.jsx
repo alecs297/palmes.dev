@@ -3,7 +3,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense, useEffect, useState, useRef } from 'react'
 import { AnimationMixer, MathUtils } from "three"
 
-import { updatePositions, convertMoves } from '../utils/engine'
+import { updatePositions, convertMoves, distance } from '../utils/engine'
 import { getScrollPercent } from '../utils/scroll'
 import DuckMoves from "../movements/duck"
 
@@ -77,8 +77,7 @@ function Duck({canvas}) {
             switchAnimation(1)
 
             updatePositions(duck.current, start, end, scrollY, reverse, (last_frame_reverse === end.frame))
-
-            mixer.update(Math.abs(scrollY - last_frame_scroll) / ms_per_percentage)
+            mixer.update((distance(start.position, end.position) * 0.3) * Math.abs(scrollY - last_frame_scroll) / ms_per_percentage)
             last_time_scroll = Date.now()
 
         } else if (Date.now() - last_time_scroll > move_timeout_ms) {

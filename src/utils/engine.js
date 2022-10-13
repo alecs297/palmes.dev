@@ -20,6 +20,10 @@ export function getPath(start, end, scroll, frame_start, frame_end) {
     return isFinite(r) ? r : start
 }
 
+export function distance(pos1, pos2) {
+    return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2) + Math.pow(pos1.z - pos2.z, 2))
+}
+
 export function convertMoves(moves, width, height) {
     return JSON.parse(JSON.stringify(moves)).map(move => {
         move.position.x = (move.position.x * width) / 10
