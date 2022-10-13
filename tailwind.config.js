@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        "stone-1000": "#0B0A09"
+      },
       keyframes: {
         'blink': {
           '0%': {
