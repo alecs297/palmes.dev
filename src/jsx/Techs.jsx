@@ -193,7 +193,7 @@ function TechList() {
             <div className="mx-3">
                 <TechTitle/>
                 <TechDescription     />
-                <div className="grid grid-cols-7 gap-2 px-12 xl:gap-8 content-evenly mx-auto w-full xl:w-3/4 xl:mx-0 font-mono bg-stone-1000">
+                <div className="grid grid-cols-7 gap-2 p-3 xl:px-12 xl:gap-8 content-evenly w-full xl:w-3/4 xl:mx-0 font-mono bg-stone-1000">
                     {
                         techs.reduce((a, b) => a.concat(b), []).map((tech, index) => {
                             return (
