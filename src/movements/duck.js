@@ -15,22 +15,35 @@ const DuckMoves = [
     {
         frame: 25,
         position: {
-            x: 6,
+            x: 3,
             y: 0,
-            z: 0
+            z: 3
         },
         rotation: {
             x: 0,
-            y: Math.PI / 2,
+            y: 0.8,
             z: 0
         }
     },
     {
         frame: 35,
         position: {
-            x: 4,
+            x: 2,
             y: 0,
+            z: 2
+        },
+        rotation: {
+            x: 0,
+            y: -0.8,
             z: 0
+        }
+    },
+    {
+        frame: 55,
+        position: {
+            x: 1,
+            y: 0,
+            z: 2
         },
         rotation: {
             x: 0,
@@ -39,7 +52,7 @@ const DuckMoves = [
         }
     },
     {
-        frame: 60,
+        frame: 80,
         position: {
             x: 0.75,
             y: 0,
@@ -47,7 +60,7 @@ const DuckMoves = [
         },
         rotation: {
             x: 0,
-            y: -Math.PI/4,
+            y: -Math.PI/2,
             z: 0
         }
     },
