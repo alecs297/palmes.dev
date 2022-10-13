@@ -3,7 +3,7 @@ const DuckMoves = [
         frame: 1,
         position: {
             x: 0,
-            y: -0.25,
+            y: 0,
             z: 0
         },
         rotation: {
@@ -16,7 +16,7 @@ const DuckMoves = [
         frame: 25,
         position: {
             x: 6,
-            y: -0.25,
+            y: 0,
             z: 0
         },
         rotation: {
@@ -29,7 +29,7 @@ const DuckMoves = [
         frame: 35,
         position: {
             x: 4,
-            y: -0.8,
+            y: 0,
             z: 0
         },
         rotation: {
@@ -39,54 +39,15 @@ const DuckMoves = [
         }
     },
     {
-        frame: 50,
+        frame: 60,
         position: {
             x: 0.75,
-            y: -1,
-            z: 1
-        },
-        rotation: {
-            x: -0.2,
-            y: -0.8,
-            z: 0.1
-        }
-    },
-    {
-        frame: 70,
-        position: {
-            x: 0.75,
-            y: -1,
-            z: 1
-        },
-        rotation: {
-            x: -0.2,
-            y: -0.8,
-            z: 0.1
-        }
-    },
-    {
-        frame: 80,
-        position: {
-            x: 0.75,
-            y: -2,
-            z: 1
-        },
-        rotation: {
-            x: -0.2,
-            y: -1,
-            z: 0
-        }
-    },
-    {
-        frame: 85,
-        position: {
-            x: 0.75,
-            y: -2,
-            z: 1
+            y: 0,
+            z: 2
         },
         rotation: {
             x: 0,
-            y: -Math.PI/2,
+            y: -Math.PI/4,
             z: 0
         }
     },
@@ -99,7 +60,7 @@ const DuckMoves = [
         },
         rotation: {
             x: 0,
-            y: -Math.PI/2,
+            y: -Math.PI,
             z: 0
         }
     },
