@@ -5,7 +5,6 @@ import Duck from './Duck'
 
 function ThreeView() {
     const canvas = useRef();
-
     return (
         <>
             <div className='h-screen w-full fixed z-0 pointer-events-none'>
@@ -15,7 +14,9 @@ function ThreeView() {
                     type: "OrthographicCamera"
                 }}>
                     <ambientLight intensity={0.5}/>
-                    <pointLight shadow={1} intensity={2} position={[10, 0, 5]} />
+                    <pointLight shadow={0.5} intensity={2} position={[10, 0, 5]} />
+                    <gridHelper rotation={[0, Math.PI/4, 0]} args={[100, 100]} />
+                    <fog attach="fog" args={['#000', 0, 33]} />
                     <Duck canvas={canvas}/>
                 </Canvas>
             </div>
