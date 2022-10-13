@@ -37,7 +37,6 @@ function Duck({canvas}) {
             if (animation) animation.fadeOut(1);
             let new_action = mixer.clipAction(gltf.animations[i]);
             new_action.reset();
-            new_action.fadeIn(1);
             new_action.play();
             animation = new_action;
             state = i;
