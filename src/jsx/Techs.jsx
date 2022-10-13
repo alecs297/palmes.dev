@@ -161,7 +161,7 @@ function TechDescription() {
         <div className="text-md tracking-tight md:text-xl p-6 bg-stone-1000 w-full xl:w-3/4 space-y-3">
             <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">languages and frameworks don't matter.</span></p>
 
-            <p>While his post is certainly inspired by a motivational quote he scrolled past on Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">he is right</span>.</p>
+            <p>While his post is probably inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">he is right</span>.</p>
 
             <p>Software engineering is not bound to a specific tool.</p>
             
@@ -183,7 +183,7 @@ function TechDescription() {
 
 function TechTitle() {
     return (
-        <h1 className="font-extrabold text-4xl md:text-6xl p-3 bg-stone-900 w-fit -translate-x-3">Tech I <span className="text-pink-600 text-5xl md:text-7xl font-black tracking-tighter">&lt;3</span> to work with</h1>
+        <h1 className="font-extrabold text-4xl md:text-6xl p-3 bg-stone-900 w-fit -translate-x-3">I <span className="text-pink-600 text-5xl md:text-7xl font-black tracking-tighter">&lt;3</span> tech</h1>
     );
 }
 
