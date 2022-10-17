@@ -158,7 +158,7 @@ const techs = [
 
 function TechDescription() {
     return (
-        <div className="text-md tracking-tight md:text-xl p-6 bg-stone-1000 w-full xl:w-3/4 space-y-3">
+        <div className="text-md tracking-tight md:text-xl p-6 bg-stone-1000 w-full 2xl:w-5/6 space-y-3">
             <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">languages and frameworks don't matter.</span></p>
 
             <p>While his post is probably inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">he is right</span>.</p>
@@ -189,11 +189,11 @@ function TechTitle() {
 
 function TechList() {
     return (
-        <div className="w-screen md:w-1/2 px-3 md:px-0 md:mx-3 h-screen float-right sticky">
+        <div className="w-screen md:w-2/3 px-3 md:px-0 md:mx-3 h-screen float-right sticky">
             <div className="mx-3">
                 <TechTitle/>
                 <TechDescription     />
-                <div className="grid grid-cols-7 gap-2 p-3 xl:px-12 xl:gap-8 content-evenly w-full xl:w-3/4 xl:mx-0 font-mono bg-stone-1000">
+                <div className="grid grid-cols-7 gap-2 p-3 2xl:px-12 xl:gap-8 content-evenly w-full 2xl:w-5/6 2xl:mx-0 font-mono bg-stone-1000">
                     {
                         techs.reduce((a, b) => a.concat(b), []).map((tech, index) => {
                             return (
