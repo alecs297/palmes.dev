@@ -165,7 +165,7 @@ function TechDescription() {
 
             <p>Software engineering is not bound to a specific tool.</p>
             
-            <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">However</span>, mastering the right <span className="line-through decoration-4 decoration-red-700">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
+            <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">However</span>, mastering the right <span className="line-through decoration-3 decoration-red-700">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
 
             <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">favorite</span> languages and frameworks I use for building stuff.</p>
 
