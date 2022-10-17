@@ -8,7 +8,12 @@ function Bio() {
         "make websites.",
         "break websites.",
         "design APIs.",
-        "code stuff."
+        "design databases.",
+        "manage servers.",
+        "code stuff.",
+        "fix stuff.",
+        "learn new stuff.",
+
     ]
 
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -32,7 +37,8 @@ function Bio() {
                         <Typewritter 
                             options={{
                                 endCallback: () => setCurrentWordIndex(currentWordIndex === stuff.length-1 ? 0 : currentWordIndex + 1),
-                                loop: false
+                                loop: false,
+                                waitMs: 1000
                             }}
                             className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-cyan-200"
                         >
