@@ -1,4 +1,5 @@
 import { Canvas } from '@react-three/fiber'
+import { useMemo } from 'react';
 import { useRef, useState } from 'react'
 
 import Duck from './Duck'
@@ -22,10 +23,15 @@ function ThreeView() {
 
                     <fog attach="fog" args={['#000', 0, fog]} />
 
-                    <Duck
-                        setFog={setFog}
-                        canvas={canvas}
-                    />
+                    {
+                        useMemo(() => {
+                            return <Duck
+                                setFog={setFog}
+                                canvas={canvas}
+                            />
+                        }, [])
+                    }
+
                 </Canvas>
             </div>
         </>
