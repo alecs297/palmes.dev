@@ -6,7 +6,7 @@ import { AnimationMixer, MathUtils } from "three"
 import { updatePositions, convertMoves, distance } from '../utils/engine'
 import { getScrollPercent } from '../utils/scroll'
 import DuckMoves from "../movements/duck"
-import { fogAnimation, ambientLightAnimation, pointLightAnimation } from '../animations/duck'
+import { fogAnimation } from '../animations/duck'
 
 // convert distance to animation frames
 const ms_per_percentage = 0.15;
@@ -15,7 +15,7 @@ const move_timeout_ms = 50
 
 const gltf_total = 150584;
 
-function Duck({canvas, setFog, setAmbientLight, setPointLight}) {
+function Duck({canvas, setFog}) {
 
 
     let state = null;
@@ -29,8 +29,6 @@ function Duck({canvas, setFog, setAmbientLight, setPointLight}) {
     const gltf = useLoader(GLTFLoader, 'models/duck_centered.glb',  undefined, (xhr) => {
         if (xhr.loaded === gltf_total) {
             fogAnimation(setFog);
-            ambientLightAnimation(setAmbientLight);
-            pointLightAnimation(setPointLight);
             console.log("Duck loaded");
         }
     })
