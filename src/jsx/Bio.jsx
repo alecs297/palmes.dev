@@ -33,7 +33,7 @@ function Bio() {
                     </p>
 
                     <p>
-                        On my free time, I
+                        In my free time, I
                         <Typewritter 
                             options={{
                                 endCallback: () => setCurrentWordIndex(currentWordIndex === stuff.length-1 ? 0 : currentWordIndex + 1),
