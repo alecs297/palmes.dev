@@ -80,13 +80,13 @@ const DuckMoves = [
     {
         frame: 99,
         position: {
-            x: -10,
+            x: -5,
             y: 0,
-            z: 0
+            z: 1
         },
         rotation: {
             x: 0,
-            y: -Math.PI,
+            y: -Math.PI/3,
             z: 0
         }
     },
