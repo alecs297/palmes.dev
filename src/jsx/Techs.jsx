@@ -189,7 +189,7 @@ function TechTitle() {
 
 function TechList() {
     return (
-        <div className="w-screen md:w-2/3 px-3 md:px-0 md:mx-3 h-screen float-right sticky">
+        <div className="w-screen md:w-4/5 bg-dotted pb-3 md:px-0 md:mx-3 float-right sticky">
             <div className="mx-3">
                 <TechTitle/>
                 <TechDescription     />
