@@ -11,12 +11,11 @@ function App() {
             <div>
                 <div id="anchor-start"/>
                 <ThreeView/>
+                <div className="w-full min-h-screen sticky top-0">
+                    <Bio/>
+                    <Header/>
+                </div>
                 <NoContent/>
-                <Header/>
-                <NoContent size="1/4"/>
-                <Bio/>
-                <NoContent/>
-                <NoContent className='sticky'/>
                 <div id="anchor-end"/>
             </div>
             <div className="z-10">
