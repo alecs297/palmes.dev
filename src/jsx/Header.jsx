@@ -35,13 +35,13 @@ function Header() {
     }, []);
     
     return (
-        <div className={"w-3/4 select-none max-w-6xl text-center mx-auto p-5 h-6 flex items-center place-content-between absolute bottom-32 lg:bottom-48 inset-x-0 rounded-lg shadow-inner shadow-white-100 bg-black border-2 border-gray-200 z-90 transition-all duration-200 " + (hidden ? "opacity-0" : "opacity-1°0")}>
+        <div className={"w-3/4 select-none max-w-6xl text-center mx-auto p-5 h-6 flex items-center place-content-between absolute bottom-32 lg:bottom-48 inset-x-0 rounded-lg shadow-inner shadow-content-default/10 bg-background-default border-2 border-content-greyed z-90 transition-all duration-200 " + (hidden ? "opacity-0" : "opacity-1°0")}>
             <div>
                 <h1 className="w-1/6 lg:inline">palmes.dev</h1>
-                <Typewritter className="hidden lg:inline" textClassName="text-sm text-stone-400" cursorClassName="text-stone-600" options={{delete: false}}> | scroll to get started</Typewritter>
+                <Typewritter className="hidden lg:inline" textClassName="text-sm text-content-greyed" cursorClassName="text-content-greyed" options={{delete: false}}> | scroll to get started</Typewritter>
             </div>
             <div className="w-1/6">
-                <ul className="bg-black border-y border-gray-800 absolute left-0 lg:left-auto -top-10 lg:w-1/6 w-full float-right -translate-y-full" hidden={!open}>
+                <ul className="bg-background-default border-y border-content-greyed absolute left-0 lg:left-auto -top-10 lg:w-1/6 w-full float-right -translate-y-full" hidden={!open}>
                     <li className="underline underline-offset-8 m-2" >Quick Links</li>
                     { menu.map(entry => {
                         return (

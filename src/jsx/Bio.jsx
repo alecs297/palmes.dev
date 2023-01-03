@@ -21,15 +21,15 @@ function Bio() {
     return (
         <div className="w-full absolute top-0 lg:top-48 lg:w-1/2 mx-4 my-16 lg:m-0 lg:grid grid-cols-1 lg:place-content-evenly z-10">
             <div className="place-self-center px-3">
-                <h2 className="text-5xl md:text-7xl font-extrabold py-3 pb-5 bg-stone-900 w-fit">Hello world.</h2>
-                <div className="md:text-3xl font-bold bg-stone-1000 p-3 translate-x-3 -translate-y-3">
+                <h2 className="text-5xl md:text-7xl font-extrabold py-3 pb-5 bg-background-accent w-fit">Hello world.</h2>
+                <div className="md:text-3xl font-bold bg-background-accent-darker p-3 translate-x-3 -translate-y-3">
                     <p>
                         My name is
-                        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500"> Alex, </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent"> Alex, </span>
                     </p>
                     <p>
                         I am an engineering student in
-                        <span className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-200 to-cyan-500"> Pau, France.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-br from-content-primary to-content-primary-accent"> Pau, France.</span>
                     </p>
 
                     <p>
@@ -41,7 +41,7 @@ function Bio() {
                                 waitMs: 1000,
                                 showCursor: true
                             }}
-                            className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-cyan-200"
+                            className="text-transparent bg-clip-text bg-gradient-to-br from-content-primary-accent to-content-primary"
                         >
                             {" " + stuff[currentWordIndex]}
                         </Typewritter>

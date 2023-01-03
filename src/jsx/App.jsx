@@ -8,7 +8,7 @@ import ProjectsContainer from "./Projects";
 function App() {
 
     return (
-        <div className="bg-black p-0 m-0 h-screen w-screen overflow-x-hidden text-white">
+        <div className="bg-background-default p-0 m-0 h-screen w-screen overflow-x-hidden text-content-default">
             <div>
                 <div id="anchor-start"/>
                 <ThreeView/>

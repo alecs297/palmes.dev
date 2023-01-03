@@ -158,16 +158,16 @@ const techs = [
 
 function TechDescription() {
     return (
-        <div className="text-md tracking-tight md:text-xl p-6 bg-stone-1000 w-full 2xl:w-5/6 space-y-3">
-            <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">languages and frameworks don't matter.</span></p>
+        <div className="text-md tracking-tight md:text-xl p-6 bg-background-accent-darker w-full 2xl:w-5/6 space-y-3">
+            <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">languages and frameworks don't matter.</span></p>
 
-            <p>While his post is probably inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">he is right</span>.</p>
+            <p>While his post is probably inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">he is right</span>.</p>
 
             <p>Software engineering is not bound to a specific tool.</p>
             
-            <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">However</span>, mastering the right <span className="line-through decoration-3 decoration-red-700">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
+            <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">However</span>, mastering the right <span className="line-through decoration-3 decoration-content-secondary-accent">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
 
-            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-cyan-200 to-cyan-500">favorite</span> languages and frameworks I use for building stuff.</p>
+            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">favorite</span> languages and frameworks I use for building stuff.</p>
 
             <p>Feel free to check out my
                 <span onClick={() => {window.open(
@@ -183,7 +183,7 @@ function TechDescription() {
 
 function TechTitle() {
     return (
-        <h1 className="font-extrabold text-4xl md:text-6xl p-3 bg-stone-900 w-fit -translate-x-3">I <span className="text-pink-600 text-5xl md:text-7xl font-black tracking-tighter">&lt;3</span> tech</h1>
+        <h1 className="font-extrabold text-4xl md:text-6xl p-3 bg-background-accent w-fit -translate-x-3">I <span className="text-content-secondary text-5xl md:text-7xl font-black tracking-tighter">&lt;3</span> tech</h1>
     );
 }
 
@@ -193,7 +193,7 @@ function TechList() {
             <div className="mx-3">
                 <TechTitle/>
                 <TechDescription     />
-                <div className="grid grid-cols-7 gap-2 p-3 2xl:px-12 xl:gap-8 content-evenly w-full 2xl:w-5/6 2xl:mx-0 font-bold bg-stone-1000">
+                <div className="grid grid-cols-7 gap-2 p-3 2xl:px-12 xl:gap-8 content-evenly w-full 2xl:w-5/6 2xl:mx-0 font-bold bg-background-accent-darker">
                     {
                         techs.reduce((a, b) => a.concat(b), []).map((tech, index) => {
                             return (

@@ -22,7 +22,7 @@ function ProjectsContainer() {
                             return (
                                 <li key={"project-cat-" + index} 
                                     onClick={() => setSelectedCategory(category)}
-                                    className={selectedCategory === category ? "bg-white text-black" : "border-2 text-white"}
+                                    className={selectedCategory === category ? "bg-content-default text-background-default" : "border-2 border-content-default"}
                                 >
                                     {category.name}
                                 </li>

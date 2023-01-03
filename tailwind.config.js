@@ -13,7 +13,14 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "stone-1000": "#0B0A09"
+        "content-primary": "#a5f3fc",
+        "content-primary-accent": "#06b6d4",
+        "content-secondary": "#db2777",
+        "content-default": "white",
+        "content-greyed": "#a8a29e",
+        "background-default": "black",
+        "background-accent": "#1c1917",
+        "background-accent-darker": "#0b0a09",
       },
       keyframes: {
         'blink': {

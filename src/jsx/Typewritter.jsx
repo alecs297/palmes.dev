@@ -73,7 +73,7 @@ function Typewritter({children, className, textClassName, cursorClassName="", op
     return (
         <span className={"inline " + className}>
             <span ref={ref} className={textClassName}>{currentText}</span>
-            <span className={"animate-blink text-cyan-100 " + ((currentText === children && !options?.loop && !options.showCursor) ? "invisible " : "visible ") + cursorClassName}>|</span>
+            <span className={"animate-blink text-content-primary-accent/80 " + ((currentText === children && !options?.loop && !options.showCursor) ? "invisible " : "visible ") + cursorClassName}>|</span>
         </span>
     )
 }
