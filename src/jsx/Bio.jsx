@@ -38,6 +38,7 @@ function Bio() {
                             options={{
                                 endCallback: () => setCurrentWordIndex(currentWordIndex === stuff.length-1 ? 0 : currentWordIndex + 1),
                                 loop: false,
+                                delete: true,
                                 waitMs: 1000,
                                 showCursor: true
                             }}

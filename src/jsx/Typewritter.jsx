@@ -10,7 +10,7 @@ function updateText(index, direction=1, options={}) {
         deleteMs: 30,
         waitMs: 3000,
         waitDeleteMs: 500,
-        delete: true,
+        delete: false,
         loop: true
     }
     options = {...default_options, ...options}
@@ -53,27 +53,30 @@ function updateText(index, direction=1, options={}) {
  * writeMs, deleteMs, waitMs, waitDeleteMs, delete, loop, endCallback, showCursor
  * 
  */
-function Typewritter({children, className, textClassName, cursorClassName="", options={}}) {
+function Typewritter({children, className="", textClassName, cursorClassName="text-content-primary-accent/80", options={}}) {
 
     const [currentText, setCurrentText] = useState(null)
     const ref = useRef()
 
     if (typeof children !== "string") throw new Error("Children must be strings");
 
+
     useEffect(() => {
-        if (currentText !== children) updateText(0, 1, {
+        const args = {
             ...options,
             ref: ref,
             target: children,
             setTarget: setCurrentText,
-        })
+        }
+        if (currentText !== children) updateText(0, 1, args)
+        return () => {args.ref = null}
     // eslint-disable-next-line
     }, [children])
 
     return (
         <span className={"inline " + className}>
             <span ref={ref} className={textClassName}>{currentText}</span>
-            <span className={"animate-blink text-content-primary-accent/80 " + ((currentText === children && !options?.loop && !options.showCursor) ? "invisible " : "visible ") + cursorClassName}>|</span>
+            <span className={"animate-blink " + ((currentText === children && !options?.loop && !options.showCursor) ? "invisible " : "visible ") + cursorClassName}>|</span>
         </span>
     )
 }
