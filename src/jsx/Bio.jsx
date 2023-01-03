@@ -19,7 +19,7 @@ function Bio() {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
     return (
-        <div className="w-full md:w-1/2 h-screen mx-4 my-16 md:m-0 md:grid grid-cols-1 sticky top-0 md:place-content-evenly z-10">
+        <div className="w-full absolute top-0 lg:top-48 lg:w-1/2 mx-4 my-16 lg:m-0 lg:grid grid-cols-1 lg:place-content-evenly z-10">
             <div className="place-self-center px-3">
                 <h2 className="text-5xl md:text-7xl font-extrabold py-3 pb-5 bg-stone-900 w-fit">Hello world.</h2>
                 <div className="md:text-3xl font-bold bg-stone-1000 p-3 translate-x-3 -translate-y-3">
@@ -38,7 +38,8 @@ function Bio() {
                             options={{
                                 endCallback: () => setCurrentWordIndex(currentWordIndex === stuff.length-1 ? 0 : currentWordIndex + 1),
                                 loop: false,
-                                waitMs: 1000
+                                waitMs: 1000,
+                                showCursor: true
                             }}
                             className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-cyan-200"
                         >
