@@ -13,7 +13,7 @@ const DuckMoves = [
         }
     },
     {
-        frame: 25,
+        frame: 50,
         position: {
             x: 4,
             y: 0,
@@ -26,7 +26,7 @@ const DuckMoves = [
         }
     },
     {
-        frame: 26,
+        frame: 51,
         position: {
             x: 4,
             y: 0,
@@ -39,7 +39,7 @@ const DuckMoves = [
         }
     },
     {
-        frame: 35,
+        frame: 60,
         position: {
             x: 2,
             y: 0,
@@ -52,7 +52,7 @@ const DuckMoves = [
         }
     },
     {
-        frame: 55,
+        frame: 65,
         position: {
             x: 1,
             y: 0,

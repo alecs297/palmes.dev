@@ -16,6 +16,7 @@ function App() {
                     <Header/>
                 </div>
                 <NoContent/>
+                <NoContent/>
                 <div id="anchor-end"/>
             </div>
             <div className="z-10">
