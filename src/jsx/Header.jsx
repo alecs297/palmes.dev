@@ -26,7 +26,7 @@ function Header() {
 
     const updateHidden = () => {
         // ugly but necessary evil
-        setHidden(document.getElementById("root").children[0].children[0].children[0].getBoundingClientRect().y < 0);
+        setHidden(document.getElementById("root").children[0].children[0].children[0].getBoundingClientRect().y < window.innerHeight*(-0.1));
     }
 
     useEffect(() => {
