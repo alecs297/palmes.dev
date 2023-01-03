@@ -1,0 +1,81 @@
+{
+    "categories": [
+        {
+            "name": "Student Life",
+            "description": "Education and campus life make up a big part of a student's life. Studying at CY Tech gave me a lot of creative opportunities for projects and tools that can improve student life. The following repos are project initiatives for improving campus life.",
+            "projects": [
+                {
+                    "title": "Efficien-CY",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "website": "https://find-a-room.palmes.dev",
+                    "repo": "https://github.com/alecs297/public-efficien-cy"
+                },
+                {
+                    "title": "Eisti-Celcat",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/eisti-celcat"
+                },
+                {
+                    "title": "CY Bot",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/cy-bot"
+                },
+                {
+                    "title": "FRE",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/Free-Real-Estate"
+                }
+            ]
+        },
+        {
+            "name": "Academic",
+            "description": "An engineering degree in computer science obviously implies assignments. Here are some purely academic projects I've done during my studies that I'm proud of.",
+            "projects": [
+                {
+                    "title": "ILoveJava",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "website": "https://ilovejava.palmes.dev",
+                    "repo": "https://github.com/alecs297/ilovejava"
+                }
+            ]
+        },
+        {
+            "name": "Entertainment",
+            "description": "Those are the projects I work on solely because I can. Some of them might respond to a very specific temporary problem. Most of them are the product of me wondering if I can make them, instead of wondering if I should. The latter are my favorite ones but are not displayed here, yet.",
+            "projects": [
+                {
+                    "title": "Spotify Canvas Visualizer",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "website": "https://spotify.palmes.dev",
+                    "repo": "https://github.com/alecs297/spotify-canvas-visualizer"
+                },
+                {
+                    "title": "Untold Radio",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/discord-untold-radio"
+                },
+                {
+                    "title": "Shitposta : Meme library delivery",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/shitposta"
+                }
+            ]
+        },
+        {
+            "name": "Utilities",
+            "description": "This is the stuff you will mainly find on my GitHub : code that could make your life easier. As most of the developers out there, I hate doing repetitive tasks. Programming is like a cake and automation is the cherry on top : you can never have too much cake. (not medical advice, use this quote at your own risk)",
+            "projects": [
+                {
+                    "title": "Executionner",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/executionner"
+                },
+                {
+                    "title": "TestFlight watcher",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/discord-testflight-watcher"
+                }
+            ]
+        }
+    ]
+}
