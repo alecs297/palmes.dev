@@ -3,6 +3,7 @@ import ThreeView from "./ThreeView";
 import NoContent from "./NoContent";
 import Bio from './Bio';
 import TechList from "./Techs";
+import ProjectsContainer from "./Projects";
 
 function App() {
 
@@ -19,8 +20,9 @@ function App() {
                 <NoContent/>
                 <div id="anchor-end"/>
             </div>
-            <div className="z-10">
+            <div className="w-full h-min-screen sticky z-10">
                 <TechList/>
+                <ProjectsContainer/>
             </div>
         </div>
     );

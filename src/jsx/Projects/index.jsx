@@ -14,13 +14,35 @@ function ProjectsContainer() {
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     
     return (
-        <div>
-
+        <div className="w-3/4 mx-auto">
+            <div>
+                <ul>
+                    {
+                        categories.map((category, index) => {
+                            return (
+                                <li key={"project-cat-" + index} 
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={selectedCategory === category ? "bg-white text-black" : "border-2 text-white"}
+                                >
+                                    {category.name}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+            <div className="grid">
+                {
+                    selectedCategory.projects.map((project, index) => {
+                        return <FeaturedProject {...project} key={"project-" + index}/>
+                    })
+                }
+            </div>
         </div>
     )
 }
 
-function FeaturedProject({ title, descriptionComponent, repo, website }) {
+function FeaturedProject({ title, descriptionComponent, repo, website, image }) {
     return (
         <div>
             <h1>{title}</h1>
@@ -43,3 +65,5 @@ function FeaturedProject({ title, descriptionComponent, repo, website }) {
         </div>
     )
 }
+
+export default ProjectsContainer;
