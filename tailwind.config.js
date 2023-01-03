@@ -16,6 +16,8 @@ module.exports = {
         "content-primary": "#a5f3fc",
         "content-primary-accent": "#06b6d4",
         "content-secondary": "#db2777",
+        "content-secondary-accent": "#b91c1c",
+        "content-links": "#f266a0",
         "content-default": "white",
         "content-greyed": "#a8a29e",
         "background-default": "black",

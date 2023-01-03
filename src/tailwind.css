@@ -9,4 +9,16 @@
         background-position: 0 0, 15px 15px;
         background-repeat: repeat;
     }
+
+    .horizontal-tb {
+        writing-mode: horizontal-tb
+    }
+
+    .vertical-rl {
+        writing-mode: vertical-rl
+    }
+
+    .vertical-lr {
+        writing-mode: vertical-lr
+    }
 }

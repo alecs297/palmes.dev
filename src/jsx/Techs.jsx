@@ -189,23 +189,25 @@ function TechTitle() {
 
 function TechList() {
     return (
-        <div className="w-screen lg:w-4/5 bg-dotted pb-3 lg:px-0 lg:mx-3 float-right">
-            <div className="mx-3">
-                <TechTitle/>
-                <TechDescription     />
-                <div className="grid grid-cols-7 gap-2 p-3 2xl:px-12 xl:gap-8 content-evenly w-full 2xl:w-5/6 2xl:mx-0 font-bold bg-background-accent-darker">
-                    {
-                        techs.reduce((a, b) => a.concat(b), []).map((tech, index) => {
-                            return (
-                                <div key={"tech-" + index} className="w-fit inline-block my-1">
-                                    <a target="_blank" rel="noreferrer noopener" href={tech.url}>
-                                        <i className={`devicon-${tech.logo} text-4xl xl:text-7xl`}></i>
-                                        <p className="hidden xl:block text-center text-xs pt-2">{tech.name}</p>
-                                    </a>
-                                </div>
-                            )
-                        })
-                    }
+        <div className="h-screen">
+            <div className="w-screen lg:w-4/5 bg-dotted pb-3 lg:px-0 lg:mx-3 float-right">
+                <div className="mx-3">
+                    <TechTitle/>
+                    <TechDescription     />
+                    <div className="grid grid-cols-7 gap-2 p-3 2xl:px-12 xl:gap-8 content-evenly w-full 2xl:w-5/6 2xl:mx-0 font-bold bg-background-accent-darker">
+                        {
+                            techs.reduce((a, b) => a.concat(b), []).map((tech, index) => {
+                                return (
+                                    <div key={"tech-" + index} className="w-fit inline-block my-1">
+                                        <a target="_blank" rel="noreferrer noopener" href={tech.url}>
+                                            <i className={`devicon-${tech.logo} text-4xl xl:text-7xl`}></i>
+                                            <p className="hidden xl:block text-center text-xs pt-2">{tech.name}</p>
+                                        </a>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </div>
