@@ -41,7 +41,7 @@ function ProjectsContainer() {
                             {selectedCategory.description}
                         </Typewritter>
                     </span>
-                    <div className="flex flex-wrap w-full justify-center gap-4 p-2 my-4">
+                    <div className="flex flex-wrap w-full justify-center gap-8 p-2 my-4">
                         {
                             selectedCategory.projects.map((project, index) => {
                                 return <FeaturedProject {...project} key={"project-" + index}/>
@@ -57,7 +57,7 @@ function ProjectsContainer() {
 
 function FeaturedProject({ title, description, repo, website }) {
     return (
-        <div className="bg-background-accent w-max rounded-lg h-max">
+        <div className="bg-background-accent w-max roundedh-max">
             <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
                 <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
                 {
