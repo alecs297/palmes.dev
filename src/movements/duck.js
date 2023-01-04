@@ -10,7 +10,8 @@ const DuckMoves = [
             x: 0,
             y: 0.8,
             z: 0
-        }
+        },
+        accessory: false
     },
     {
         frame: 50,
@@ -23,7 +24,8 @@ const DuckMoves = [
             x: 0,
             y: 0.8,
             z: 0
-        }
+        },
+        accessory: false
     },
     {
         frame: 51,
@@ -36,7 +38,8 @@ const DuckMoves = [
             x: 0,
             y: -Math.PI / 2,
             z: 0
-        }
+        },
+        accessory: true
     },
     {
         frame: 60,
@@ -49,7 +52,8 @@ const DuckMoves = [
             x: 0,
             y: -Math.PI / 2,
             z: 0
-        }
+        },
+        accessory: true
     },
     {
         frame: 65,
@@ -62,7 +66,8 @@ const DuckMoves = [
             x: 0,
             y: -Math.PI / 2,
             z: 0
-        }
+        },
+        accessory: true
     },
     {
         frame: 70,
@@ -75,7 +80,8 @@ const DuckMoves = [
             x: 0,
             y: -Math.PI/2,
             z: 0
-        }
+        },
+        accessory: true
     },
     {
         frame: 99,
@@ -88,7 +94,8 @@ const DuckMoves = [
             x: 0,
             y: -Math.PI/3,
             z: 0
-        }
+        },
+        accessory: true
     },
 ]
 

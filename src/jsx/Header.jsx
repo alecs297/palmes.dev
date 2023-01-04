@@ -16,8 +16,16 @@ function Header() {
             url: "https://www.linkedin.com/in/alecs297"
         },
         {
-            title: "Model Source",
+            title: "Malt",
+            url: "https://www.malt.fr/profile/alex"
+        },
+        {
+            title: "Duck Model",
             url: "https://skfb.ly/o6KIu"
+        },
+        {
+            title: "Switch Model",
+            url: "https://skfb.ly/on79x"
         }
     ];
 
