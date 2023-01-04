@@ -173,7 +173,7 @@ function TechDescription() {
                 <span onClick={() => {window.open(
                     "https://github.com/alecs297",
                     "_blank"
-                )}} className="font-bold text-xl mx-1 cursor-pointer underline">
+                )}} className="font-bold text-xl mx-1 cursor-pointer">
                     <i className="devicon-github-original"></i> GitHub
                 </span> for some of my projects.
             </p>
