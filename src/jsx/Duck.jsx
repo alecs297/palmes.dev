@@ -1,6 +1,7 @@
 import { useFrame, useThree, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useEffect, useState, useRef } from 'react'
+import { useGLTF } from "@react-three/drei"
+import { useEffect, useState, useRef, Suspense } from 'react'
 import { AnimationMixer, MathUtils } from "three"
 
 import { updatePositions, convertMoves, distance } from '../utils/engine'
@@ -33,18 +34,16 @@ function Duck({canvas, setFog}) {
         }
     })
 
-    const cisco = useLoader(GLTFLoader, 'models/cisco_centered.glb');
+    const cisco = useGLTF('models/cisco_centered.glb');
 
     Object.keys(cisco.nodes).forEach(k => {
-        cisco.nodes[k].scale.set(0.5, 0.5, 0.5);
+        cisco.nodes[k].scale.set(0.001, 0.001, 0.001);
         cisco.nodes[k].position.y = -15;
         cisco.nodes[k].position.x = 8.20;
         cisco.nodes[k].position.z = 3;
         cisco.nodes[k].rotation.y = -Math.PI/6;
         cisco.nodes[k].rotation.x = Math.PI/10;
-        cisco.nodes[k].visible = false;
         gltf.nodes.MarineHub002_00.add(cisco.nodes[k]);
-
     })
 
 
@@ -54,6 +53,7 @@ function Duck({canvas, setFog}) {
     let last_frame_scroll = 0;
     let last_time_scroll = Date.now();
     let last_frame_reverse = false;
+    let cisco_visible = false;
 
     let movements = DuckMoves;
 
@@ -71,6 +71,11 @@ function Duck({canvas, setFog}) {
     function toggleCisco(visible) {
         Object.keys(cisco.nodes).forEach(k => {
             cisco.nodes[k].visible = visible;
+            if (visible) {
+                cisco.nodes[k].scale.set(0.5, 0.5, 0.5);
+            } else {
+                cisco.nodes[k].scale.set(0.001, 0.001, 0.001);
+            }
         })
     }
 
@@ -107,7 +112,10 @@ function Duck({canvas, setFog}) {
 
             switchAnimation(1)
 
-            toggleCisco(start.accessory)
+            if (start.accessory !== cisco_visible) {
+                toggleCisco(start.accessory);
+                cisco_visible = !cisco_visible
+            }
 
             updatePositions(duck.current, start, end, scrollY, reverse, (last_frame_reverse === end.frame))
             mixer.update((distance(start.position, end.position) * 0.3) * Math.abs(scrollY - last_frame_scroll) / ms_per_percentage)
@@ -136,11 +144,13 @@ function Duck({canvas, setFog}) {
     })
 
     return (
-        <mesh
-            ref={duck} 
-            scale={1}>
-            <primitive scale={0.75} object={gltf.scene}/>
-        </mesh>
+        <Suspense fallback={null}>
+            <mesh
+                ref={duck} 
+                scale={1}>
+                <primitive scale={0.75} object={gltf.scene}/>
+            </mesh>
+        </Suspense>
     )
 }
 

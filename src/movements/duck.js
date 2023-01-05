@@ -25,7 +25,7 @@ const DuckMoves = [
             y: 0.8,
             z: 0
         },
-        accessory: false
+        accessory: true
     },
     {
         frame: 47,
