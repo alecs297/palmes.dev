@@ -34,7 +34,7 @@
                 },
                 {
                     "title": "FRE",
-                    "description": "Free Real Estate,\n\nwhile the name can be a little pretentious, FRE was a free PHP hosting service for students, taking advantage of docker containers.\n\nThe hardware, the software and the support were all provided by me and another student, making this project a great learning experience and an exciting technical challenge to overcome. All students were provided with a subdomain, an apache server with PHP support, a code-server instance, a MySQL database and access to a file manager app. Everything ran in docker containers, on a server hosted in my living room, right next to my couch. It was a great experience, and I am proud of what we achieved : a fully functional hosting service, for free, for students, that was actually used !",
+                    "description": "Free Real Estate,\n\nwhile the name can be a little pretentious, FRE was a free PHP hosting service for students, taking advantage of docker containers.\n\nThe hardware, the software and the support were all provided by me and another student, making this project a great learning experience and an exciting technical challenge to overcome.\n\nAll \"clients\" were provided with a subdomain, an apache server with PHP support, a code-server instance, a MySQL database and access to a file manager app.\n\nEverything ran in docker containers, on a server hosted in my living room, right next to my couch. It was a great experience : a fully functional hosting service, for free, for students.",
                     "repo": "https://github.com/Free-Real-Estate"
                 }
             ]

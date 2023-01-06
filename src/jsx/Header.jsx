@@ -16,7 +16,7 @@ function Header() {
             url: "https://www.linkedin.com/in/alecs297"
         },
         {
-            title: "Malt",
+            title: "Malt.fr",
             url: "https://www.malt.fr/profile/alex"
         },
         {
@@ -53,8 +53,8 @@ function Header() {
                 <Typewritter className="hidden lg:inline" textClassName="text-sm text-content-greyed" cursorClassName="text-content-greyed" options={{delete: false}}> | scroll to get started</Typewritter>
             </div>
             <div className="w-1/6">
-                <ul className="bg-background-default border-y border-content-greyed absolute left-0 lg:left-auto -top-10 lg:w-1/6 w-full float-right -translate-y-full" hidden={!open}>
-                    <li className="underline underline-offset-8 m-2" >Quick Links</li>
+                <ul className="bg-background-default border-y border-content-greyed absolute left-0 lg:left-auto -top-10 lg:w-1/6 w-full py-4 float-right -translate-y-full" hidden={!open}>
+                    <li className="underline underline-offset-8 font-bold mb-2" >Quick Links</li>
                     { menu.map(entry => {
                         return (
                             <li key={"nav-button-" + entry.title}>

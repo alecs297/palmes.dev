@@ -8,9 +8,9 @@ function ProjectsContainer() {
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     
     return (
-        <div className="w-full lg:w-3/4 clear-both mx-auto h-min-[75vh]">
+        <div className="w-full lg:w-3/4 py-32 clear-both mx-auto h-min-[75vh]">
             <div className="w-1/12 hidden lg:inline-block float-left">
-                <h1 className="select-none text-content-greyed vertical-lr h-full text-4xl text-center uppercase tracking-wider -scale-100 font-black">
+                <h1 className="select-none text-content-greyed vertical-lr h-max py-20 text-4xl text-center uppercase tracking-wider -scale-100 font-black">
                     {"/** Work in perpetual progress */"}
                 </h1>
             </div>
@@ -41,7 +41,7 @@ function ProjectsContainer() {
                             {selectedCategory.description}
                         </Typewritter>
                     </span>
-                    <div className="flex flex-wrap w-full justify-center gap-8 p-2 my-4">
+                    <div className="flex flex-wrap w-full justify-center p-2 my-4">
                         {
                             selectedCategory.projects.map((project, index) => {
                                 return <FeaturedProject {...project} key={"project-" + index}/>
@@ -57,32 +57,35 @@ function ProjectsContainer() {
 
 function FeaturedProject({ title, description, repo, website }) {
     return (
-        <div className="bg-background-accent min-w-1/2 rounded h-max">
-            <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
-                <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
-                {
-                    repo && (
-                        <a className="inline" href={repo} target="_blank" rel="noreferrer">
-                            <i className="devicon-github-original mr-2"></i>
-                            Open source
-                        </a>
-                    )
-                }
-                {
-                    website && (
-                        <div className="block">
-                            <a className="inline text-content-links" href={website} target="_blank" rel="noreferrer">
-                                {website}
+        <div className="w-full lg:w-1/2 h-max p-4">
+            <div className="bg-background-accent w-full rounded">
+                <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
+                    <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
+                    {
+                        repo && (
+                            <a className="inline" href={repo} target="_blank" rel="noreferrer">
+                                <i className="devicon-github-original mr-2"></i>
+                                Open source
                             </a>
-                        </div>
-                    )
-                }
+                        )
+                    }
+                    {
+                        website && (
+                            <div className="block">
+                                <a className="inline text-content-links" href={website} target="_blank" rel="noreferrer">
+                                    {website}
+                                </a>
+                            </div>
+                        )
+                    }
+                </div>
+                
+                <p className="block whitespace-pre-line max-w-full h-max p-4">
+                    {description}
+                </p>
             </div>
-            
-            <p className="block whitespace-pre-line max-w-full h-max p-4">
-                {description}
-            </p>
         </div>
+        
     )
 }
 
