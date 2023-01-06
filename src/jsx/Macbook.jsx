@@ -10,12 +10,12 @@ function isIframe() {
 
 function ModelEmbed({closed}) {
     const gpu = useDetectGPU();
-    if (gpu.tier < 2 || gpu.isMobile) return null;
+    if (gpu.tier < 1 || gpu.isMobile) return null;
     return (
         <Html scale={0.125} position={[-0.15, 1.9, -2.8]} rotation={[-Math.PI/9.5, 0, 0]} transform occlude>        
             {
                     !closed && (isIframe() ? (
-                        <div className="bg-white h-[840px] w-[1344px] rounded-md">
+                        <div className="h-[840px] w-[1344px] rounded-md">
                             <div className="w-full h-[6%] flex bg-macos-window rounded-t-lg">
                                 <div className="w-2/12 my-auto mx-4 flex space-x-2">
                                     <span className="rounded-full inline-flex w-4 h-4 bg-macos-close"></span>
