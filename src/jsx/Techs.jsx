@@ -159,23 +159,26 @@ const techs = [
 function TechDescription() {
     return (
         <div className="text-md tracking-tight md:text-xl p-6 bg-background-accent-darker w-full 2xl:w-5/6 space-y-3">
-            <p>Some HR guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">languages and frameworks don't matter.</span></p>
-
-            <p>While his post is probably inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">he is right</span>.</p>
-
-            <p>Software engineering is not bound to a specific tool.</p>
+            <p>
+                Some guy on Linkedin once said : <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">languages and frameworks don't matter.</span>
             
-            <p><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">However</span>, mastering the right <span className="line-through decoration-3 decoration-content-secondary-accent">deprecated JavaScript</span> framework for the job does save a lot of time.</p>
+                <br/>
+            
+                While his post is certainly inspired by a motivational quote from Facebook, <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">he is right</span>.
+            </p>
+
+            <p>
+                Software engineering is not bound to a specific tool.
+                <br/>
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">However</span>, mastering the right <span className="line-through decoration-3 decoration-content-secondary-accent">deprecated JavaScript</span> framework for the job does save a lot of time.
+            </p>
 
             <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">favorite</span> languages and frameworks I use for building stuff.</p>
 
             <p>Feel free to check out my
-                <span onClick={() => {window.open(
-                    "https://github.com/alecs297",
-                    "_blank"
-                )}} className="font-bold text-xl mx-1 cursor-pointer">
+                <a href={"https://github.com/alecs297"} target={"_blank"} rel="noreferrer" className="font-bold text-xl mx-1 cursor-pointer" >
                     <i className="devicon-github-original"></i> GitHub
-                </span> for some of my projects.
+                </a> or scroll to the next section for some of my projects.
             </p>
         </div>
     );

@@ -26,6 +26,10 @@ function Header() {
         {
             title: "Switch Model",
             url: "https://skfb.ly/on79x"
+        },
+        {
+            title: "MacBook Air Model",
+            url: "https://skfb.ly/o6Upt"
         }
     ];
 
@@ -34,7 +38,7 @@ function Header() {
 
     const updateHidden = () => {
         // ugly but necessary evil
-        setHidden(document.getElementById("root").children[0].children[0].children[0].getBoundingClientRect().y < window.innerHeight*(-0.1));
+        setHidden(document.getElementById("root").children[0].children[0].children[0].getBoundingClientRect().y < window.innerHeight*(-0.15));
     }
 
     useEffect(() => {
@@ -61,7 +65,7 @@ function Header() {
                         )
                     })}
                 </ul>
-                <button className="w-full" onClick={() => setOpen(!open)}>{ open ? "</>" : "< >" }</button>
+                <button className="w-full font-bold" onClick={() => setOpen(!open)}>{ open ? "</>" : "< >" }</button>
             </div>
         </div>
     )
