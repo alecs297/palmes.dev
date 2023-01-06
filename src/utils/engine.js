@@ -1,3 +1,6 @@
+import { Frustum, Matrix4, Vector3, Box3 } from 'three';
+
+
 export function updatePositions(object, start, end, scrollY, reverse=false, just_reversed=0) {
 
     object.position.x = getPath(start.position.x, end.position.x, scrollY, start.frame, end.frame);
@@ -30,4 +33,24 @@ export function convertMoves(moves, width, height) {
         move.position.y = (move.position.y * height) / 10
         return move;
     })
+}
+
+export function objectIsViewedEntirely(camera, object) {
+    const frustum = new Frustum()
+    const matrix = new Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse)
+    frustum.setFromProjectionMatrix(matrix)
+
+    const box = new Box3()
+    box.setFromObject(object)
+
+    // check for every point of 3D box
+    let res = frustum.containsPoint(new Vector3(box.min.x, box.min.y, box.min.z))
+    res = res && frustum.containsPoint(new Vector3(box.min.x, box.min.y, box.max.z))
+    res = res && frustum.containsPoint(new Vector3(box.min.x, box.max.y, box.min.z))
+    res = res && frustum.containsPoint(new Vector3(box.min.x, box.max.y, box.max.z))
+    res = res && frustum.containsPoint(new Vector3(box.max.x, box.min.y, box.min.z))
+    res = res && frustum.containsPoint(new Vector3(box.max.x, box.min.y, box.max.z))
+    res = res && frustum.containsPoint(new Vector3(box.max.x, box.max.y, box.min.z))
+    res = res && frustum.containsPoint(new Vector3(box.max.x, box.max.y, box.max.z))
+    return res;
 }

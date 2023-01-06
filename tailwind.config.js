@@ -23,6 +23,11 @@ module.exports = {
         "background-default": "black",
         "background-accent": "#1c1917",
         "background-accent-darker": "#0b0a09",
+        "macos-window": "#F5F5F5",
+        "macos-window-dark": "#C0BFC0",
+        "macos-close": "#FF605C",
+        "macos-minimize": "#FFBD44",
+        "macos-maximize": "#00CA4E",
       },
       keyframes: {
         'blink': {
