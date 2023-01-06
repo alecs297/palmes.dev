@@ -6,29 +6,35 @@
             "projects": [
                 {
                     "title": "ILoveJava",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "A Java dedicated forum built with Spring Boot, Spring Security, Spring Data JPA and tailwindcss.\n\nPowered by markdown-it and PrismJS, it features full rich text formatting support and intelligent code highlighting.\n\nIt has been designed as the final project for our Java EE course, by a group of 3 students. The main goal was to create a forum with a modern design, while following the MVC pattern.",
                     "website": "https://ilovejava.palmes.dev",
                     "repo": "https://github.com/alecs297/ilovejava"
                 },
                 {
                     "title": "Efficien-CY",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "A web app that helps students find a quiet empty place on campus, also known as Find A Room.\n\nIt features a simple and clean design, and a documented REST API. It is powered by koa, tailwindcss and redoc, while using scraped events from student's timetables as data source.\n\nThe ease of use, together with the simple powerful API makes it a great tool and an easy integration, not only for students, but also for teachers and staff.",
                     "website": "https://find-a-room.palmes.dev",
                     "repo": "https://github.com/alecs297/public-efficien-cy"
                 },
                 {
-                    "title": "Eisti-Celcat",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
-                    "repo": "https://github.com/alecs297/eisti-celcat"
+                    "title": "ARPIÆ Website",
+                    "description": "The official website for the ARPIÆ association, CYTech's \"Junior Entreprise\", built by me and another student during my time as a member of the board (SysAdmin).\n\nFeaturing a pure look and a minimalistic design, it is a simple one-page display website powered by tailwindcss",
+                    "website": "https://www.arpiae.com/",
+                    "repo": "https://gitlab.com/arpia3/arpiae-site"
                 },
                 {
                     "title": "CY Bot",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Discord bot that automatically updates the new timetables for selected classes to dedicated channels.\n\nUpdating every 10 minutes, it is a great tool for students to keep track of their classes. Actively used by dozens of people, it is often the go-to solution for fast and easy peaking at the upcoming events.\n\nIt is built with discord.js and uses an old command handling system, but an update is planned in a near future.",
                     "repo": "https://github.com/alecs297/cy-bot"
                 },
                 {
+                    "title": "EISTI-Celcat",
+                    "description": "Node.JS utility script that scrapes EISTI's (CY Tech) Celcat calendars and exports them to .ics files.\n\nIt is a simple script that can be used to integrate the calendars with other apps, Efficien-CY and other utilities depend on it.\n\nWhile being the first scrapper for EISTI's Celcat, it is not the most efficient one, nor the most popular one. It is however still maintained and used by some people.",
+                    "repo": "https://github.com/alecs297/eisti-celcat"
+                },
+                {
                     "title": "FRE",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Free Real Estate,\n\nwhile the name can be a little pretentious, FRE was a free PHP hosting service for students, taking advantage of docker containers.\n\nThe hardware, the software and the support were all provided by me and another student, making this project a great learning experience and an exciting technical challenge to overcome. All students were provided with a subdomain, an apache server with PHP support, a code-server instance, a MySQL database and access to a file manager app. Everything ran in docker containers, on a server hosted in my living room, right next to my couch. It was a great experience, and I am proud of what we achieved : a fully functional hosting service, for free, for students, that was actually used !",
                     "repo": "https://github.com/Free-Real-Estate"
                 }
             ]

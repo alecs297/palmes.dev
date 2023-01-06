@@ -57,7 +57,7 @@ function ProjectsContainer() {
 
 function FeaturedProject({ title, description, repo, website }) {
     return (
-        <div className="bg-background-accent w-max roundedh-max">
+        <div className="bg-background-accent min-w-1/2 rounded h-max">
             <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
                 <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
                 {
@@ -79,9 +79,9 @@ function FeaturedProject({ title, description, repo, website }) {
                 }
             </div>
             
-            <span className="block w-max h-max p-4">
+            <p className="block whitespace-pre-line max-w-full h-max p-4">
                 {description}
-            </span>
+            </p>
         </div>
     )
 }
