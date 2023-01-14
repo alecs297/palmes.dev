@@ -8,9 +8,9 @@ function ProjectsContainer() {
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     
     return (
-        <div className="w-full lg:w-3/4 clear-both mx-auto h-min-[75vh]">
+        <div className="w-full lg:w-3/4 py-32 clear-both mx-auto h-min-[75vh]">
             <div className="w-1/12 hidden lg:inline-block float-left">
-                <h1 className="select-none text-content-greyed vertical-lr h-full text-4xl text-center uppercase tracking-wider -scale-100 font-black">
+                <h1 className="select-none text-content-greyed vertical-lr h-max py-20 text-4xl text-center uppercase tracking-wider -scale-100 font-black">
                     {"/** Work in perpetual progress */"}
                 </h1>
             </div>
