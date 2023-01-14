@@ -41,7 +41,7 @@ function ProjectsContainer() {
                             {selectedCategory.description}
                         </Typewritter>
                     </span>
-                    <div className="flex flex-wrap w-full justify-center gap-8 p-2 my-4">
+                    <div className="flex flex-wrap w-full justify-center p-2 my-4">
                         {
                             selectedCategory.projects.map((project, index) => {
                                 return <FeaturedProject {...project} key={"project-" + index}/>
@@ -57,32 +57,35 @@ function ProjectsContainer() {
 
 function FeaturedProject({ title, description, repo, website }) {
     return (
-        <div className="bg-background-accent min-w-1/2 rounded h-max">
-            <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
-                <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
-                {
-                    repo && (
-                        <a className="inline" href={repo} target="_blank" rel="noreferrer">
-                            <i className="devicon-github-original mr-2"></i>
-                            Open source
-                        </a>
-                    )
-                }
-                {
-                    website && (
-                        <div className="block">
-                            <a className="inline text-content-links" href={website} target="_blank" rel="noreferrer">
-                                {website}
+        <div className="w-1/2 p-4">
+            <div className="bg-background-accent w-full rounded h-max">
+                <div className="bg-background-accent-darker w-full px-4 py-4 -translate-x-3 -translate-y-3">
+                    <h1 className="select-none text-content-primary font-bold text-2xl">{title}</h1>
+                    {
+                        repo && (
+                            <a className="inline" href={repo} target="_blank" rel="noreferrer">
+                                <i className="devicon-github-original mr-2"></i>
+                                Open source
                             </a>
-                        </div>
-                    )
-                }
+                        )
+                    }
+                    {
+                        website && (
+                            <div className="block">
+                                <a className="inline text-content-links" href={website} target="_blank" rel="noreferrer">
+                                    {website}
+                                </a>
+                            </div>
+                        )
+                    }
+                </div>
+                
+                <p className="block whitespace-pre-line max-w-full h-max p-4">
+                    {description}
+                </p>
             </div>
-            
-            <p className="block whitespace-pre-line max-w-full h-max p-4">
-                {description}
-            </p>
         </div>
+        
     )
 }
 

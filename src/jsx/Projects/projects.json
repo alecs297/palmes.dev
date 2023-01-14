@@ -71,6 +71,11 @@
             "description": "This is the stuff you will mainly find on my GitHub : code that could make your life easier.\n\nAs most of the developers out there, I hate doing repetitive tasks. Programming is like a cake and automation is the cherry on top : you can never have too much cake (not a medical advice).\n\nThe following repos got a little bit of love from people around the world, they're far from popular but I felt like they deserve a mention.",
             "projects": [
                 {
+                    "title": "DJI SRT Parser",
+                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "repo": "https://github.com/alecs297/dji-srt-parser"
+                },
+                {
                     "title": "Executionner",
                     "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
                     "repo": "https://github.com/alecs297/executionner"
