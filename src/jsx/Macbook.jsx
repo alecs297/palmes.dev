@@ -3,14 +3,13 @@ import { Html, OrbitControls, useDetectGPU, useGLTF } from "@react-three/drei"
 import { Suspense, useRef, useState } from 'react'
 import { useMemo } from 'react';
 import { objectIsViewedEntirely } from '../utils/engine';
+import fakemacbook from '../images/fakemacbook.png'
 
 function isIframe() {
     return window.top === window.self;
 }
 
 function ModelEmbed({closed}) {
-    const gpu = useDetectGPU();
-    if (gpu.tier < 1 || gpu.isMobile) return null;
     return (
         <Html scale={0.125} position={[-0.15, 1.9, -2.8]} rotation={[-Math.PI/9.5, 0, 0]} transform occlude>        
             {
@@ -48,6 +47,9 @@ function Model() {
 
     const [closed, setClosed] = useState(true);
 
+    const gpu = useDetectGPU();
+    const rendered = (gpu.tier > 0 && !gpu.isMobile)
+
     useFrame((state, delta) => {
 
         if (mesh.current) {
@@ -66,14 +68,16 @@ function Model() {
                 onClick={() => { if (closed) setClosed(false)}}
             >
                 <primitive scale={20} object={gltf.scene}/>
-                <ModelEmbed closed={closed} />
+                {
+                    rendered && <ModelEmbed closed={closed} />
+                }
 
             </group>
         </Suspense>
     )
 }
 
-function Macbook() {
+export function Macbook() {
 
     return (
         <div className="max-h-inherit max-w-inherit aspect-square">
@@ -97,4 +101,8 @@ function Macbook() {
     )
 }
 
-export default Macbook;
+export function FakeMacbook() {
+    return (
+        <img src={fakemacbook} alt="Macbook Air"/>
+    )
+}

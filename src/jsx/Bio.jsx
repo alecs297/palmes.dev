@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Macbook from "./Macbook";
+import { Macbook, FakeMacbook} from "./Macbook";
 import Typewritter from "./Typewritter";
 
 function Bio() {
@@ -19,10 +19,13 @@ function Bio() {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
     return (
-        <div className="min-h-screen w-full flex flex-wrap">
+        <div className="min-h-screen py-4 w-full flex flex-wrap">
             <div className="my-auto order-2 lg:order-1 w-full lg:w-2/5 pointer-events-none lg:pointer-events-auto">
-                <div className="lg:float-right w-full lg:w-3/4">
+                <div className="hidden lg:block float-right w-3/4">
                     <Macbook />
+                </div>
+                <div className="block p-4 lg:hidden w-full">
+                    <FakeMacbook />
                 </div>
             </div>
             <div className="w-full order-1 lg:order-2 px-2 lg:inline-block lg:w-3/5 lg:float-right my-auto z-10">
