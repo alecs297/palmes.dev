@@ -45,23 +45,23 @@
             "projects": [
                 {
                     "title": "Spotify Canvas Visualizer",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "React web application tracking your Spotify activity to show Canvas visuals.\n\nThe canvas themselves are queried from Spotify's unofficial API, the currently playing status is gathered with the official one and are issued by the browser itself.\n\nWhile the utility of this project isn't obvious, it has served multiple sets and parties.",
                     "website": "https://spotify.palmes.dev",
                     "repo": "https://github.com/alecs297/spotify-canvas-visualizer"
                 },
                 {
                     "title": "Enigma",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Enigma is an online treasure hunt community that I have founded back in 2017. While puzzle releases have become a rare event due to the amount of time and creativity required for each one of them, some projects are still in the works.\n\nOver the years, we have engineered dozens of complex treasure hunts under different forms, the majority being Web Applications but also Android Apps and CTFs.\n\nKnowledge of basic cryptography, stenography and sometimes OSINT is required for solving our puzzles.",
                     "website": "https://the-enigma.party"
                 },
                 {
                     "title": "Untold Radio",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Untold is a romanian EDM festival taking place in Cluj. This project was about retrieving the radio feed of the Untold application and embedding it in a basic Discord bot.\n\nBuilt with Discord.js, a public version of the bot is maintained.",
                     "repo": "https://github.com/alecs297/discord-untold-radio"
                 },
                 {
                     "title": "Shitposta : Meme library delivery",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Shitposta is a very basic media viewer and database. Designed to be a simple web interface playing random videos and content, it is a Node.JS web application indexing media files to a SQLite database and allowing easy acces to them.\n\nThe project's name derived from the type of content it was designed to serve : memes",
                     "repo": "https://github.com/alecs297/shitposta"
                 }
             ]
@@ -72,17 +72,17 @@
             "projects": [
                 {
                     "title": "DJI SRT Parser",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "A simple python script that takes DJI-drone taken video files as an entry then extracts flight metadata and offers basic summaries for the different measurements.\n\nTested with DJI FPV footage, it should be compatible with other DJI models.",
                     "repo": "https://github.com/alecs297/dji-srt-parser"
                 },
                 {
                     "title": "Executionner",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "A Discord.js terminal emulator, supporting real-time output. Executionner allows turning a Discord channel in an easy-to-access shell, use at your own risk (;",
                     "repo": "https://github.com/alecs297/executionner"
                 },
                 {
                     "title": "TestFlight watcher",
-                    "description": "Lorem ipsum amet consectetur adipisicing elit. Quisquam, quod.",
+                    "description": "Basic Discord webhook for scraping iOS TestFlight application programs for availability.\n\nBuilt with Node.JS, the script queries all the selected links and sends a message to your dedicated Discord channel whenever joining is an option.\n\nThis project has been used by quite some people, which was a pleasant surprise.",
                     "repo": "https://github.com/alecs297/discord-testflight-watcher"
                 }
             ]
