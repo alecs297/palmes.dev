@@ -173,7 +173,7 @@ function TechDescription() {
                 <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">However</span>, mastering the right <span className="line-through decoration-3 decoration-content-secondary-accent">deprecated JavaScript</span> framework for the job does save a lot of time.
             </p>
 
-            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">favorite</span> languages and frameworks I use for building stuff.</p>
+            <p>I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">always learning new things</span>, but these are some of my <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-content-primary to-content-primary-accent">favorite</span> languages, frameworks and tools I use for building stuff.</p>
 
             <p>Feel free to check out my
                 <a href={"https://github.com/alecs297"} target={"_blank"} rel="noreferrer" className="font-bold text-xl mx-1 cursor-pointer" >
