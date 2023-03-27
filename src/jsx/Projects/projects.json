@@ -5,6 +5,12 @@
             "description": "Education and campus life make up a big part of a student's life. Studying at CY Tech gave me a lot of creative opportunities for projects and tools that can improve student life.\n\nThe following repos are both academic projects and personal initiatives for improving campus life.",
             "projects": [
                 {
+                    "title": "Fairy",
+                    "description": "Very basic bill splitting web app built with Angular, express and MongoDB.\n\nWhile the original scope of this project was implementing JWT authentication, a lot of time has been invested in a responsive modern UX, powered by tailwindcss and Chart.js.\n\nFairy was also my first opportunity to work with Angular.",
+                    "website": "https://fairy.palmes.dev",
+                    "repo": "https://github.com/alecs297/fairy-front"
+                },
+                {
                     "title": "ILoveJava",
                     "description": "A Java dedicated forum built with Spring Boot, Spring Security, Spring Data JPA and tailwindcss.\n\nPowered by markdown-it and PrismJS, it features full rich text formatting support and intelligent code highlighting.\n\nIt has been designed as the final project for our Java EE course, by a group of 3 students. The main goal was to create a forum with a modern design, while following the MVC pattern.",
                     "website": "https://ilovejava.palmes.dev",
