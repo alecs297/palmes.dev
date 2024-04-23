@@ -16,10 +16,6 @@ function Header() {
             url: "https://www.linkedin.com/in/alecs297"
         },
         {
-            title: "Malt.fr",
-            url: "https://www.malt.fr/profile/alex"
-        },
-        {
             title: "Duck Model",
             url: "https://skfb.ly/o6KIu"
         },
