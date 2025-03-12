@@ -178,7 +178,7 @@ function TechDescription() {
             <p>Feel free to check out my
                 <a href={"https://github.com/alecs297"} target={"_blank"} rel="noreferrer" className="font-bold text-xl mx-1 cursor-pointer" >
                     <i className="devicon-github-original"></i> GitHub
-                </a> or scroll to the next section for some of my projects.
+                </a>or scroll to the next section for some of my projects.
             </p>
         </div>
     );
